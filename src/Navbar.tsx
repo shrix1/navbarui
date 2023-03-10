@@ -3,7 +3,7 @@ import { CiSearch } from "react-icons/ci";
 import { RiMenu3Line } from "react-icons/ri";
 import { IoIosClose, IoIosArrowUp } from "react-icons/io";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [click, setClick] = useState<boolean>(false);
   const [navClick, setNavClick] = useState<boolean>(true);
   const listParent = useRef<HTMLUListElement | any>(null);
@@ -14,27 +14,25 @@ const Navbar = () => {
     };
 
     window.addEventListener("mousedown", handle);
-
     return () => window.removeEventListener("mousedown", handle);
   }, []);
 
   return (
     <>
-      <nav className="border-b border-b-[#b1a6a69a] p-5 flex justify-around items-center">
-        <section className="flex lg:justify-around items-center lg:w-[70vw] w-[100vw] justify-center">
-          <div className="flex lg:gap-6 gap-[170px] justify-around">
+      <nav className="navbar">
+        <section className="nav-container">
+          <div className="main-container">
             <div className="text-slate-800">
               <h1 className="text-2xl font-bold">Travi</h1>
-              <h5 className="text-[13px] -mt-1 font-bold -ml-1">Associates</h5>
+              <h5 className=" text-[13px] -mt-1 font-bold -ml-1">Associates</h5>
             </div>
 
-            <div className="flex lg:block lg:gap-6 items-center justify-center gap-4">
-              <div className="p-3 border-gray lg:border bg-whitegray tracking-wide rounded-full flex font-[500]     ">
-                <CiSearch className="text-2xl text-gray " />
+            <div className="search-menu">
+              <div className="search-container">
+                <CiSearch className="text-2xl text-gray" />
                 <input
                   type="search"
-                  className="outline-none placeholder:text-[13px] placeholder:text-gray bg-whitegray pl-2 pt-[2px]
-                  hidden lg:block"
+                  className="search-inp"
                   placeholder="Search"
                 />
               </div>
@@ -52,14 +50,9 @@ const Navbar = () => {
           </div>
 
           <div className={` ${click ? "" : "hidden"}  lg:block lg:static `}>
-            <ul
-              className="flex justify-center lg:items-center lg:flex-row lg:gap-8 font-medium text-black tracking-wide
-             absolute left-0 flex-col top-[90px] p-4 w-full lg:static lg:border-0 lg:p-0 gap-4
-             bg-[#e7e4e4] lg:bg-transparent"
-            >
+            <ul className="nav-ullist">
               <li
-                className="lg:relative px-6 bg-white py-6 rounded-lg lg:p-0 lg:rounded-none 
-                text-[18px] font-bold text-slate-700 lg:text-[17px] lg:font-normal cursor-pointer"
+                className="dropdown-parent"
                 onClick={() => setNavClick(!navClick)}
                 ref={listParent}
               >
@@ -79,14 +72,16 @@ const Navbar = () => {
                     className={`lg:absolute { ${
                       navClick ? "hidden" : ""
                     } lg:bg-[#F5F5F5] lg:px-8 lg:py-4 top-10 rounded-md lg:shadow-md flex flex-col gap-5 justify-center
-                     font-normal text-[16px] lg:w-[200px]`}
+                     font-normal text-[16px] lg:w-[200px] `}
                   >
                     <li className="border-b-2 border-b-gray/20 hover:text-tblue py-2">
                       <a href="/">IND stocks</a>
                     </li>
+
                     <li className="border-b-2 border-b-gray/20  hover:text-tblue py-2">
                       <a href="/">IND stocks</a>
                     </li>
+
                     <li className="border-b-2 border-b-gray/20 hover:text-tblue py-2">
                       <a href="/">IND stocks</a>
                     </li>
@@ -94,24 +89,15 @@ const Navbar = () => {
                 </div>
               </li>
 
-              <li
-                className=" hover:text-tblue px-6 bg-white py-6 rounded-lg lg:p-0 lg:rounded-none 
-                text-[18px] font-bold text-slate-700 lg:text-[17px] lg:font-normal"
-              >
+              <li className="list">
                 <a href="/"> Features</a>
               </li>
 
-              <li
-                className="hover:text-tblue px-6 bg-white py-6 rounded-lg lg:p-0 lg:rounded-none 
-                text-[18px] font-bold text-slate-700 lg:text-[17px] lg:font-normal"
-              >
+              <li className="list">
                 <a href="/">Blog</a>
               </li>
 
-              <li
-                className=" hover:text-tblue px-6 bg-white py-6 rounded-lg lg:p-0 lg:rounded-none 
-                text-[18px] font-bold text-slate-700 lg:text-[17px] lg:font-normal"
-              >
+              <li className="list">
                 <a href="/"> Pricing</a>
               </li>
 

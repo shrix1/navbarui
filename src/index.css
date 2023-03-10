@@ -2,3 +2,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navbar {
+  @apply border-b border-b-[#b1a6a69a] p-5 flex justify-around items-center;
+}
+
+.nav-container {
+  @apply flex lg:justify-around items-center lg:w-[70vw] w-[100vw] justify-center;
+}
+
+.main-container {
+  @apply flex lg:gap-6 gap-[170px] justify-around;
+}
+
+.search-menu {
+  @apply flex lg:block lg:gap-6 items-center justify-center gap-4;
+}
+
+.search-container {
+  @apply p-3 border-gray lg:border bg-whitegray tracking-wide rounded-full flex font-[500];
+}
+
+.search-inp {
+  @apply outline-none placeholder:text-[13px] placeholder:text-gray bg-whitegray pl-2 pt-[2px]
+    hidden lg:block;
+}
+
+.nav-ullist {
+  @apply flex justify-center lg:items-center lg:flex-row lg:gap-8 font-medium text-black tracking-wide
+    absolute left-0 flex-col top-[90px] p-4 w-full lg:static lg:border-0 lg:p-0 gap-4
+    bg-[#e7e4e4] lg:bg-transparent;
+}
+
+.dropdown-parent {
+  @apply lg:relative px-6 bg-white py-6 rounded-lg lg:p-0 lg:rounded-none 
+ text-[18px] font-bold text-slate-700 lg:text-[17px] lg:font-normal cursor-pointer;
+}
+
+.list {
+  @apply hover:text-tblue px-6 bg-white py-6 rounded-lg lg:p-0 lg:rounded-none 
+    text-[18px] font-bold text-slate-700 lg:text-[17px] lg:font-normal;
+}

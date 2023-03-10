@@ -3,7 +3,7 @@ import { RiWhatsappFill } from "react-icons/ri";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { AiFillTwitterCircle } from "react-icons/ai";
 
-const Blog = () => {
+const Blog: React.FC = () => {
   return (
     <main className="flex justify-center h-full">
       <section className="flex lg:w-[55%] w-screen lg:justify-center px-4 flex-col">
