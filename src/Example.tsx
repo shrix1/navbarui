@@ -11,8 +11,19 @@ const Example = () => {
 
   const NavItems = (props: any) => {
     return (
+      <li className="flex justify-around items-center">
+        <span> {props.name}</span> <span>{props.icon}</span>
+      </li>
+    );
+  };
+
+  const DropDown = (props: any) => {
+    return (
       <li>
-        {props.name} {props.icon}
+        {props.name} +
+        <ul>
+          <li>{props.dropDownName}</li>
+        </ul>
       </li>
     );
   };
@@ -22,6 +33,7 @@ const Example = () => {
       <h1>Title</h1>
       <NavElements>
         <NavItems name="home" icon="☮️" />
+        <DropDown name="invest" dropDownName="INDSTOCKS" />
         <NavItems name="about" />
         <NavItems name="contact" />
       </NavElements>
