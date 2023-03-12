@@ -21,6 +21,7 @@ const Navbar: React.FC = () => {
     <>
       <nav className="navbar">
         <section className="nav-container">
+          {/* title and search */}
           <div className="main-container">
             <div className="text-slate-800">
               <h1 className="text-2xl font-bold">Travi</h1>
@@ -37,6 +38,7 @@ const Navbar: React.FC = () => {
                 />
               </div>
 
+              {/* hamburger */}
               <div className="lg:hidden">
                 <button onClick={() => setClick(!click)}>
                   {click ? (
@@ -49,6 +51,7 @@ const Navbar: React.FC = () => {
             </div>
           </div>
 
+          {/* list of nav items */}
           <div className={` ${click ? "" : "hidden"}  lg:block lg:static `}>
             <ul className="nav-ullist">
               <li
@@ -67,6 +70,7 @@ const Navbar: React.FC = () => {
                   </span>
                 </div>
 
+                {/* dropdown */}
                 <div>
                   <ul
                     className={`lg:absolute { ${
