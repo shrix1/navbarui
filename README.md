@@ -1,5 +1,14 @@
 # Navbar UI and blog page concept
 ## website : https://navbarui.vercel.app/
+
+## Installation
+### Clone the rep 
+      git clone 
+### Install the dependencies
+      npm install 
+### Start the local environment
+      npm run dev 
+      
 ## step 1:
  ### various UI design (done in figma)
  ![image](https://user-images.githubusercontent.com/92677078/224549412-80befce1-4515-4102-8fec-2f24ed55671b.png)
@@ -14,4 +23,6 @@
 
 ## simple explanation:
 ![image](https://user-images.githubusercontent.com/92677078/224549603-7092078e-dd1c-42e7-b4bf-820d475d3046.png)
+
+
 
