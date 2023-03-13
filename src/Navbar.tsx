@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className={`navbar fixed w-full bg-wh`}>
+      <nav className={`navbar fixed w-full bg-white`}>
         <section className="nav-container">
           {/* title and search */}
           <div className="main-container">
