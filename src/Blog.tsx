@@ -6,7 +6,7 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 const Blog: React.FC = () => {
   return (
     <main className="flex justify-center h-full">
-      <section className="flex lg:w-[55%] w-screen lg:justify-center px-4 flex-col">
+      <section className="flex lg:w-[55%] w-screen lg:justify-center px-4 flex-col mt-[70px]">
         <div className="flex flex-col pt-10 gap-5">
           <div className="text-[14px] font-bold tracking-wide">
             <span className="text-gray">Home</span> {">"}

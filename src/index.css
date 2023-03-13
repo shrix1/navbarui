@@ -29,9 +29,10 @@
 }
 
 .nav-ullist {
-  @apply flex justify-center lg:items-center lg:flex-row lg:gap-8 font-medium text-black tracking-wide
-    absolute left-0 flex-col top-[90px] p-4 w-full lg:static lg:border-0 lg:p-0 gap-4
-    bg-[#e7e4e4] lg:bg-transparent;
+  @apply flex  lg:items-center lg:flex-row lg:gap-8 font-medium text-black tracking-wide
+     left-0 flex-col top-[80px] p-4 w-full lg:static lg:border-0 lg:p-0 gap-4
+    bg-[#e7e4e4] lg:bg-transparent fixed transform lg:overflow-visible overflow-hidden
+    lg:translate-x-0 transition-all duration-200 h-full;
 }
 
 .dropdown-parent {

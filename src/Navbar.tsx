@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { CiSearch } from "react-icons/ci";
 import { RiMenu3Line } from "react-icons/ri";
 import { IoIosClose, IoIosArrowUp } from "react-icons/io";
+import Blog from "./Blog";
 
 const Navbar: React.FC = () => {
   const [click, setClick] = useState<boolean>(false);
@@ -19,7 +20,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="navbar">
+      <nav className={`navbar fixed w-full bg-wh`}>
         <section className="nav-container">
           {/* title and search */}
           <div className="main-container">
@@ -42,7 +43,7 @@ const Navbar: React.FC = () => {
               <div className="lg:hidden">
                 <button onClick={() => setClick(!click)}>
                   {click ? (
-                    <IoIosClose className="text-4xl mt-2 text-black/70" />
+                    <IoIosClose className="text-3xl mt-2 text-black/70" />
                   ) : (
                     <RiMenu3Line className=" mt-2 text-[26px] text-black/70" />
                   )}
@@ -52,8 +53,12 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* list of nav items */}
-          <div className={` ${click ? "" : "hidden"}  lg:block lg:static `}>
-            <ul className="nav-ullist">
+          <div className={` ${click ? "block" : "hidden"}  lg:block `}>
+            <ul
+              className={`nav-ullist ${
+                click ? "translate-x-0" : "translate-x-full"
+              } `}
+            >
               <li
                 className="dropdown-parent"
                 onClick={() => setNavClick(!navClick)}
@@ -73,7 +78,7 @@ const Navbar: React.FC = () => {
                 {/* dropdown */}
                 <div>
                   <ul
-                    className={`lg:absolute { ${
+                    className={`lg:absolute  ${
                       navClick ? "hidden" : ""
                     } lg:bg-[#F5F5F5] lg:px-8 lg:py-4 top-10 rounded-md lg:shadow-md flex flex-col gap-5 justify-center
                      font-normal text-[16px] lg:w-[200px] `}
@@ -118,6 +123,10 @@ const Navbar: React.FC = () => {
           </div>
         </section>
       </nav>
+
+      {/* <div className={`${click && "hidden"}`}>
+        <Blog />
+      </div> */}
     </>
   );
 };
