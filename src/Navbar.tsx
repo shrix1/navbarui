@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className={`navbar fixed w-full bg-white`}>
+      <nav className="navbar">
         <section className="nav-container">
           {/* title and search */}
           <div className="main-container">
@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* list of nav items */}
-          <div className={` ${click ? "block" : "hidden"}  lg:block `}>
+          <div className={` ${click ? "block" : ""}  lg:block `}>
             <ul
               className={`nav-ullist ${
                 click ? "translate-x-0" : "translate-x-full"

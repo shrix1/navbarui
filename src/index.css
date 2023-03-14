@@ -4,11 +4,11 @@
 @tailwind utilities;
 
 .navbar {
-  @apply border-b border-b-[#b1a6a69a] p-5 flex justify-around items-center;
+  @apply border-b fixed w-full bg-white border-b-[#b1a6a69a] p-5 flex justify-around items-center;
 }
 
 .nav-container {
-  @apply flex lg:justify-around items-center lg:w-[70vw] w-[100vw] justify-center;
+  @apply flex lg:justify-around items-center lg:w-[70vw] w-[100vw] justify-evenly;
 }
 
 .main-container {
@@ -30,17 +30,17 @@
 
 .nav-ullist {
   @apply flex  lg:items-center lg:flex-row lg:gap-8 font-medium text-black tracking-wide
-     left-0 flex-col top-[80px] p-4 w-full lg:static lg:border-0 lg:p-0 gap-4
-    bg-[#e7e4e4] lg:bg-transparent fixed transform lg:overflow-visible overflow-hidden
-    lg:translate-x-0 transition-all duration-200 h-full;
+  left-0 flex-col top-[80px] p-4 w-full lg:static lg:border-0 lg:p-0 gap-4
+ bg-[#e7e4e4] lg:bg-transparent fixed lg:overflow-visible overflow-hidden
+ lg:translate-x-0  transform h-full transition-transform duration-1000;
 }
 
 .dropdown-parent {
   @apply lg:relative px-6 bg-white py-6 rounded-lg lg:p-0 lg:rounded-none 
- text-[18px] font-bold text-slate-700 lg:text-[17px] lg:font-normal cursor-pointer;
+ text-[18px] font-bold text-slate-700 lg:text-[15px] lg:font-normal cursor-pointer;
 }
 
 .list {
   @apply hover:text-tblue px-6 bg-white py-6 rounded-lg lg:p-0 lg:rounded-none 
-    text-[18px] font-bold text-slate-700 lg:text-[17px] lg:font-normal;
+    text-[18px] font-bold text-slate-700 lg:text-[15px] lg:font-normal;
 }
