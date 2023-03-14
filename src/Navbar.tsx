@@ -110,7 +110,7 @@ const Navbar: React.FC = () => {
                 <a href="/"> Pricing</a>
               </li>
 
-              <li className="flex spacex-5 justify-center">
+              <li className="flex space-x-5 justify-center">
                 <button className="px-6 py-3 lg:bg-whitegray rounded-full font-bold bg-white w-[200px] lg:w-auto">
                   Log In
                 </button>
