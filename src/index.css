@@ -8,7 +8,7 @@
 }
 
 .nav-container {
-  @apply flex lg:justify-around items-center lg:w-[70vw] w-[100vw] justify-evenly;
+  @apply flex lg:justify-around items-center lg:w-[70vw] w-[100vw] justify-center;
 }
 
 .main-container {
@@ -16,7 +16,7 @@
 }
 
 .search-menu {
-  @apply flex lg:block lg:gap-6 items-center justify-center gap-4;
+  @apply flex lg:block lg:gap-6 items-center justify-center space-x-5;
 }
 
 .search-container {
@@ -32,7 +32,7 @@
   @apply flex  lg:items-center lg:flex-row lg:gap-8 font-medium text-black tracking-wide
   left-0 flex-col top-[80px] p-4 w-full lg:static lg:border-0 lg:p-0 gap-4
  bg-[#e7e4e4] lg:bg-transparent fixed lg:overflow-visible overflow-hidden
- lg:translate-x-0  transform h-full transition-transform duration-1000;
+ lg:translate-x-0  transform h-full transition-transform duration-500;
 }
 
 .dropdown-parent {
